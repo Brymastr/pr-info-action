@@ -1,0 +1,24 @@
+{
+  "name": "pr-info-action",
+  "version": "0.1.0",
+  "description": "Deploy a new service version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brymastr/deploy-action.git"
+  },
+  "keywords": [],
+  "author": "Brycen Dorsay <dorsay@live.ca>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Brymastr/deploy-action/issues"
+  },
+  "homepage": "https://github.com/Brymastr/deploy-action#readme",
+  "dependencies": {
+    "@actions/core": "1.2.0",
+    "@actions/github": "2.1.0"
+  }
+}
