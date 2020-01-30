@@ -11,7 +11,7 @@ outputs:
     description: number of commits included in the pull request
   assignee:
     description: pull request assignee
-  pr_number:
+  number:
     description: pull request number
   title:
     description: title of the pull request
