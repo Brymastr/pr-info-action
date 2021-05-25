@@ -6147,11 +6147,8 @@ var exports = __webpack_exports__;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core_1 = __nccwpck_require__(186);
 const github_1 = __nccwpck_require__(438);
-const core_2 = __nccwpck_require__(186);
 function main() {
     var _a;
-    core_2.debug(JSON.stringify(process.env));
-    core_2.debug(JSON.stringify(github_1.context));
     const pr = (_a = github_1.context === null || github_1.context === void 0 ? void 0 : github_1.context.payload) === null || _a === void 0 ? void 0 : _a.pull_request;
     if (!pr)
         throw 'Not a pull request';
