@@ -1,0 +1,40 @@
+{
+  "blocks": [
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*GitHub Actions* Activity in {{ repo }}"
+      },
+      "accessory": {
+        "type": "button",
+        "text": {
+          "type": "plain_text",
+          "text": "View workflow",
+          "emoji": true
+        },
+        "url": "{{ actions_url }}"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "*Repo:*\n<{{ repo_url }}|{{ repo }}>"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Ref:*\n{{ ref }}"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Event:*\n{{ event }}"
+        }
+      ]
+    }
+  ]
+}

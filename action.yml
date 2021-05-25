@@ -1,5 +1,5 @@
-name: "Get PR Info Action"
-description: "Get information from a pull request"
+name: Get PR Info Action
+description: Get information from a pull request
 outputs:
   additions:
     description: number of code additions
@@ -30,5 +30,5 @@ outputs:
   draft:
     description: boolean representing if this pr is a draft
 runs:
-  using: "node12"
-  main: "index.js"
+  using: node12
+  main: dist/index.js
