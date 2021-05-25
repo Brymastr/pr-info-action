@@ -1,8 +1,12 @@
 import { setOutput, setFailed } from '@actions/core';
-import github from '@actions/github';
+import github, { getOctokit } from '@actions/github';
 
 export default function main() {
-  const pr = github.context.payload.pull_request;
+  console.log(github);
+  console.log(getOctokit);
+  console.log(process.env);
+
+  const pr = github?.context?.payload?.pull_request;
   if (!pr) throw 'Not a pull request';
 
   // additions
