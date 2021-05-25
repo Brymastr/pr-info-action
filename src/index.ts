@@ -1,10 +1,10 @@
 import { setOutput, setFailed } from '@actions/core';
 import { context } from '@actions/github';
-import core from '@actions/core';
+import { debug } from '@actions/core';
 
 export default function main() {
-  core.debug(JSON.stringify(process.env));
-  core.debug(JSON.stringify(context));
+  debug(JSON.stringify(process.env));
+  debug(JSON.stringify(context));
 
   const pr = context?.payload?.pull_request;
   if (!pr) throw 'Not a pull request';

@@ -1,69 +1,6 @@
 require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 822:
-/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
-
-"use strict";
-
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-const core_1 = __nccwpck_require__(186);
-const github_1 = __nccwpck_require__(438);
-const core_2 = __importDefault(__nccwpck_require__(186));
-function main() {
-    var _a;
-    core_2.default.debug(JSON.stringify(process.env));
-    core_2.default.debug(JSON.stringify(github_1.context));
-    const pr = (_a = github_1.context === null || github_1.context === void 0 ? void 0 : github_1.context.payload) === null || _a === void 0 ? void 0 : _a.pull_request;
-    if (!pr)
-        throw 'Not a pull request';
-    // additions
-    core_1.setOutput('additions', pr.additions);
-    // deletions
-    core_1.setOutput('deletions', pr.deletions);
-    // changed_files
-    core_1.setOutput('changed_files', pr.changed_files);
-    // commits
-    core_1.setOutput('commits', pr.commits);
-    // assignee
-    core_1.setOutput('assignee', pr.assignee);
-    // number
-    core_1.setOutput('number', pr.number);
-    // title
-    core_1.setOutput('title', pr.title);
-    // body
-    core_1.setOutput('body', pr.body);
-    // created_at
-    core_1.setOutput('created_at', pr.created_at);
-    // updated_at
-    core_1.setOutput('updated_at', pr.updated_at);
-    // url
-    core_1.setOutput('url', pr.html_url);
-    // base_branch
-    core_1.setOutput('base_branch', pr.base.ref);
-    // base_commit
-    core_1.setOutput('base_commit', pr.base.sha);
-    // head_branch
-    core_1.setOutput('head_branch', pr.head.ref);
-    // head_commit
-    core_1.setOutput('head_commit', pr.head.sha);
-    // draft
-    core_1.setOutput('draft', pr.draft);
-}
-exports.default = main;
-try {
-    main();
-}
-catch (err) {
-    core_1.setFailed(err.message);
-}
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
 /***/ 351:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
@@ -6201,13 +6138,67 @@ module.exports = require("zlib");;
 /******/ 	/* webpack/runtime/compat */
 /******/ 	
 /******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = __dirname + "/";/************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __nccwpck_require__(822);
-/******/ 	module.exports = __webpack_exports__;
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+var exports = __webpack_exports__;
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core_1 = __nccwpck_require__(186);
+const github_1 = __nccwpck_require__(438);
+const core_2 = __nccwpck_require__(186);
+function main() {
+    var _a;
+    core_2.debug(JSON.stringify(process.env));
+    core_2.debug(JSON.stringify(github_1.context));
+    const pr = (_a = github_1.context === null || github_1.context === void 0 ? void 0 : github_1.context.payload) === null || _a === void 0 ? void 0 : _a.pull_request;
+    if (!pr)
+        throw 'Not a pull request';
+    // additions
+    core_1.setOutput('additions', pr.additions);
+    // deletions
+    core_1.setOutput('deletions', pr.deletions);
+    // changed_files
+    core_1.setOutput('changed_files', pr.changed_files);
+    // commits
+    core_1.setOutput('commits', pr.commits);
+    // assignee
+    core_1.setOutput('assignee', pr.assignee);
+    // number
+    core_1.setOutput('number', pr.number);
+    // title
+    core_1.setOutput('title', pr.title);
+    // body
+    core_1.setOutput('body', pr.body);
+    // created_at
+    core_1.setOutput('created_at', pr.created_at);
+    // updated_at
+    core_1.setOutput('updated_at', pr.updated_at);
+    // url
+    core_1.setOutput('url', pr.html_url);
+    // base_branch
+    core_1.setOutput('base_branch', pr.base.ref);
+    // base_commit
+    core_1.setOutput('base_commit', pr.base.sha);
+    // head_branch
+    core_1.setOutput('head_branch', pr.head.ref);
+    // head_commit
+    core_1.setOutput('head_commit', pr.head.sha);
+    // draft
+    core_1.setOutput('draft', pr.draft);
+}
+exports.default = main;
+try {
+    main();
+}
+catch (err) {
+    core_1.setFailed(err.message);
+}
+//# sourceMappingURL=index.js.map
+})();
+
+module.exports = __webpack_exports__;
 /******/ })()
 ;
 //# sourceMappingURL=index.js.map
